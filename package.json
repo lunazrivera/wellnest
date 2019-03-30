@@ -1,0 +1,25 @@
+{
+  "name": "wellnest",
+  "version": "0.0.1",
+  "description": "A motivation surrounded web application that allows the user to create, read, update and delete its task. And informs on wellness.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lunazrivera/wellnest.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lunazrivera/wellnest/issues"
+  },
+  "homepage": "https://github.com/lunazrivera/wellnest#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "mysql2": "^1.6.5",
+    "sequelize": "^5.2.6"
+  }
+}
