@@ -43,6 +43,7 @@ $(document).ready(function() {
      }
 
      function loginAttempt(userCred){
+          console.log("hello")
           $.post("/api/login", userCred)
      }
 
