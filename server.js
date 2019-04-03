@@ -8,15 +8,11 @@ require('dotenv').config();
 // Bellow we'll be requiring dependencies for the server.
 var express = require("express");
 var session = require("express-session");
+var passport = require("passport")
 
 // Bellow we'll be creating an instance of the express application.
 var app = express();
 var PORT = process.env.PORT || 8000;
-
-
-// Passport config
-var passport = require("passport")
-require("./config/passport")(passport)
 
 // Requiring models for syncing.
 var db = require("./models");
@@ -29,9 +25,12 @@ app.use(express.json());
 app.use(express.static("public"));
 
 //Sets up express app to handle passport.js
-app.use(session({secret: "secret "}))
+app.use(session({secret: "secret"}))
 app.use(passport.initialize());
 app.use(passport.session());
+
+// Passport config
+require("./config/passport")(passport)
 
 // Routes
 require("./routes/user-api-routes")(app);

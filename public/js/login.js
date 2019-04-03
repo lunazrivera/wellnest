@@ -4,13 +4,13 @@ $(document).ready(function() {
      var password = $("#password");
      var firstName = $("#firstname");
      var lastName = $("#lastname");
-     var newUsername = $("#newusername");
-     var newPassword = $("#newpassword");
+     var newUsername = $("#new-username");
+     var newPassword = $("#new-password");
 
      //Adding event delegation to the document but focusing
      //on specific id's
      // $(document).on("click", "#login", handleLoginForm);
-     $("#submit").on("click", function(event) {
+     $("#submit-button").on("click", function(event) {
           event.preventDefault();
 
           createUser({
@@ -37,14 +37,16 @@ $(document).ready(function() {
      });
 
      function createUser(userData) {
-          $.post("/api/users", userData).then(function() {
-               alert("Your account has been created");
+          $.post("/api/users", userData).done(function(data) {
+               console.log(data)
           })
      }
 
      function loginAttempt(userCred){
           console.log("hello")
-          $.post("/api/login", userCred)
+          $.post("/api/login", userCred, function() {
+               window.location = '/task';
+          })
      }
 
 

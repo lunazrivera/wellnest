@@ -7,13 +7,17 @@ module.exports = function(passport) {
                //Match user
                db.user.findOne({username: username}).then(function(user) {
                     console.log("You are in match user");
+                    console.log(user);
                     if(!user){
                          return done(null, false, {message: "that username is not registered"}); 
                     };
                     //Match password
                     bcrypt.compare(password, user.password, function(err, isMatch) {
+                         console.log('hi');
+                         console.log(err);
                          if  (err) throw err;
 
+                         console.log(isMatch);
                          if (isMatch) {
                               return done(null, user)
                          } else {
@@ -29,8 +33,10 @@ module.exports = function(passport) {
      });
 
      passport.deserializeUser(function(id, done) {
-          db.user.findOne({where: {id: id}}).then(function(err, user) {
-               done(err, user);
+          db.user.findOne({where: {id: id}}).then(function(user) {
+               console.log('hey');
+               console.log(user);
+               done(null, user);
           });
      });
 

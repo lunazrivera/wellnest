@@ -9,7 +9,7 @@ module.exports = function(sequelize,DataTypes) {
                allowNull: false,
                validate: {
                     isAlphanumeric: true,
-                    len: [6, 8],
+                    len: [5, 15],
                     notEmpty: true,
                }
           },
