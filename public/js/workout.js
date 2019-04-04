@@ -126,7 +126,7 @@
 //     })
 // })
 
-$("button").on("click", function(){
+$("#theLegs").on("click", function(){
     var legWork = $(this).attr("data-workout-leg");
 
     var queryURL1 = "https://jflopezr11.github.io/WorkoutJSON/workouts/workouts-1.json";
@@ -177,7 +177,7 @@ $("button").on("click", function(){
     }) 
 })    
 
-$("button").on("click", function(){
+$("#cardioHitt").on("click", function(){
     var cardioWork = $(this).attr("data-workout-cardio");
 
     var queryURL2 = "https://jflopezr11.github.io/WorkoutJSON/workouts/workouts-2.json";
@@ -228,7 +228,7 @@ $("button").on("click", function(){
     }) 
 })
 
-$("button").on("click", function(){
+$("#pLift").on("click", function(){
     var liftWork = $(this).attr("data-workout-lift");
 
     var queryURL3 = "https://jflopezr11.github.io/WorkoutJSON/workouts/workouts-3.json";
