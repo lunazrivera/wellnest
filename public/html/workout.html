@@ -4,26 +4,57 @@
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/core.js"></script>
      <title>Wellnest | Workout</title>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
      <h1>workout page</h1>
 
-     <div id="my_container" class="fatsecret_container"></div>
+     <!-- <div id="my_container" class="fatsecret_container"></div>
 
 
      <script src="https://platform.fatsecret.com/js?key=c572524486de445292d5da1f1690241c&auto_load=true"></script>
 
-     <script src="https://platform.fatsecret.com/js?key=c572524486de445292d5da1f1690241c"></script>
+     <script src="https://platform.fatsecret.com/js?key=c572524486de445292d5da1f1690241c"></script> -->
+
+     <!-- <script src="https://platform.fatsecret.com/js?key=c572524486de445292d5da1f1690241c&theme=black"></script>
      <script>
           fatsecret.setContainer("my_container");
           fatsecret.setCanvas("home");
-     </script>
+     </script> -->
 
+     <button data-workout-legs="legs" id="theLegs">Legs</button>
+     <button data-workout-cardio="hiitcardio" id="cardioHitt">Cardio</button>
+     <button data-workout-lift="powerlifting">Power Lifting</button>
 
+     <div class="container">
+          <div class="row">
+               <div class="cards"> 
+                    <div class= "card-body" id="legs-appear-here"></div>
+               </div>
+          </div>
+          <div class="row">
+               <div class="cards"> 
+                    <div class= "card-body" id="cardio-appears-here"></div>
+               </div>
+          </div>
+     </div>
+     
+     <div class="container">
+          <div class="row">
+               <div class="cards"> 
+                    <div class= "card-body" id="powerlifting-appears-here"></div>
+               </div>
+          </div>
+     </div>
+    
 
-
+    
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
      <script src="../js/workout.js"></script>
+    
+    
 </body>
 </html>
