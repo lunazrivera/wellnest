@@ -45,8 +45,8 @@ $(document).ready(function() {
      function getTask() {
           $.get("/api/task", function(data) {
                
-               console.log("Below is data")
-               console.log(data);
+               // console.log("Below is data")
+               // console.log(data);
                tasks = data;
                // console.log(tasks)
                initializeRows();
@@ -56,12 +56,12 @@ $(document).ready(function() {
      function initializeRows() {
           $taskContainer.empty();
           var rowsToAdd = [];
-          console.log(tasks, "initialize rows");
+          // console.log(tasks, "initialize rows");
           for (var i = 0; i < tasks.length; i++) {
                rowsToAdd.push(createNewRow(tasks[i]));
           }
-          console.log("rows below")
-          console.log(rowsToAdd)
+          // console.log("rows below")
+          // console.log(rowsToAdd)
           $taskContainer.append(rowsToAdd);
      }
      
@@ -108,14 +108,14 @@ $(document).ready(function() {
           if (task.complete) {
                $newInputRow.find("span").css("text-decoration", "line-through");
           }
-          console.log()
-          console.log()
-          console.log()
-          console.log("New input below")
-          console.log($newInputRow);
-          console.log()
-          console.log()
-          console.log()
+          // console.log()
+          // console.log()
+          // console.log()
+          // console.log("New input below")
+          // console.log($newInputRow);
+          // console.log()
+          // console.log()
+          // console.log()
           return $newInputRow;
      }
 
@@ -132,8 +132,8 @@ $(document).ready(function() {
 
      function editTask () {
           var currentTask = $(this).children("span");
-          console.log(this);
-          console.log(currentTask.text());
+          // console.log(this);
+          // console.log(currentTask.text());
           $(this).children().hide();
           $(this).children("input.edit").val(currentTask.text());
           $(this).children("input.edit").show();
@@ -150,14 +150,17 @@ $(document).ready(function() {
      function finishEdit(event) {
           if (event.which !== 13) { return; }
 
+          debugger;
+          
           var updatedTask = $(this).children("span");
-          console.log($(this).text(), "Hello world!");
+          // console.log($(this).text(), "Hello world!");
           // set text then return it as value to updated
           var value = updatedTask.text($(this).children("input").val().trim()).text(); 
           console.log(value);
           $(this).blur();
-          var taskId = $(this).closest("[data-id]");
-          var field = $(this).attr('name');
+          var taskId = $(this).closest("[data-id]").attr('data-id');
+          console.log(taskId);
+          var field = $(this).children("input").attr("name");
           var payload = {};
           payload[field] = value;
 
