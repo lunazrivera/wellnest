@@ -2,15 +2,15 @@
 // Server.js - This file is the initial starting point for the Node/Express server.
 // *********************************************************************************
 
-// Dotenv required
+// Dotenv required for concealing password and api keys
 require('dotenv').config();
 
-// Bellow we'll be requiring dependencies for the server.
+// Below we'll be requiring dependencies for the server.
 var express = require("express");
 var session = require("express-session");
 var passport = require("passport")
 
-// Bellow we'll be creating an instance of the express application.
+// Below we'll be creating an instance of the express application.
 var app = express();
 var PORT = process.env.PORT || 8000;
 
@@ -34,11 +34,11 @@ require("./config/passport")(passport)
 
 // Routes
 require("./routes/user-api-routes")(app);
-// require("./routes/task-api-routes")(app);
+require("./routes/task-api-routes")(app);
 require("./routes/html-routes.js")(app);
 
 //Syncing our sequelize models and then starting our express application.
-db.sequelize.sync({ force: true }).then(function() {
+db.sequelize.sync({ force: false }).then(function() {
      app.listen(PORT, function() {
           console.log("App listening on: https://localhost:" + PORT);
      });

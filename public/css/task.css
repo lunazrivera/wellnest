@@ -43,7 +43,11 @@ body {
                height: 70px;
           }
           .username-space {
-               align-self: center; 
+               align-self: center;
+               margin-right: 10px; 
+          }
+          .log-out {
+               align-self: center;
           }
 
      .task-creation-container {
@@ -59,9 +63,28 @@ body {
           background-color: black;
      }
 
-     .task-area {
+     .task-container {
           margin: 0 auto;
           margin-top: 10px;
           max-width: 850px;
           border: 1px solid white;
      }
+          .task {
+               background-color: white;
+          }
+               table {
+                    width: 100%;
+                    border: 1px solid black;
+               }
+               td, th {
+                    border: 1px solid black;
+                    text-align: left;
+                    padding: 5px;
+               }
+          .editors-container {
+               display: flex;
+               justify-content: flex-end;
+          }
+          .fas {
+               margin-right: 10px;
+          }

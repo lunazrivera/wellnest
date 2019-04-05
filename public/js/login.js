@@ -1,7 +1,5 @@
 $(document).ready(function() {
      //Getting reference to the name input
-     var username = $("#username");
-     var password = $("#password");
      var firstName = $("#firstname");
      var lastName = $("#lastname");
      var newUsername = $("#new-username");
@@ -19,17 +17,27 @@ $(document).ready(function() {
                lastname: lastName.val().trim(),
                password: newPassword.val().trim()
           });
+
+               newUsername.val("");
+               firstName.val("");
+               lastName.val("");
+               newPassword.val("");
      });
 
      $("#login").on("click", function(event) {
           event.preventDefault();
+          var username = $("#username").val().trim();
+          var password = $("#password").val().trim();
 
-          if(!username.val().trim() || !password.val().trim()) {
+          if(!username || !password) {
                return;
           }
+
+          console.log(username, password)
+
           var userCredentials = {
-               username: username.val().trim(),
-               password: password.val().trim()
+               username: username,
+               password: password
           }
           
           loginAttempt(userCredentials);
@@ -38,16 +46,22 @@ $(document).ready(function() {
 
      function createUser(userData) {
           $.post("/api/users", userData).done(function(data) {
-               console.log(data)
+               // console.log(data)
+               
           })
+          
+          
      }
 
      function loginAttempt(userCred){
-          console.log("hello")
           $.post("/api/login", userCred, function() {
+               // console.log("Below user credentials"); //this is not console login
+               // console.log(userCred);  //this is not console login
                window.location = '/task';
           })
      }
+
+     
 
 
 })

@@ -7,7 +7,10 @@
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
      <script src="../js/task.js"></script>
      <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet"/>
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+     <link rel="icon" type="image/png" href="../assets/logo.png">
      <link rel="stylesheet" type="text/css" media="screen" href="../css/task.css"/>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
      <title>Wellnest || Task </title>
 </head>
 <body>
@@ -16,24 +19,48 @@
                <img src="../assets/logo.png" class="logo-image" alt="bird-logo">
                <nav class="nav">
                     <ul class="nav-list">
-                         <li>WORKOUT | </li>
-                         <li>TASK | </li>
-                         <li>NUTRITION</li>
+                         <li> <a href="/workout" id="workout-page"> WORKOUT </a> | </li>
+                         <li> <a href="/task" id="task-page"> TASK </a> | </li>
+                         <li> <a href="/nurtrition" id="nutrition-page"> NUTRITION </a></li>
                     </ul>
                </nav>
           </div>
 
           <div class="user-container">
                <img src="../assets/user-logo.png" class="user-logo" alt="bird-png">
-               <a class="username-space">SIGNED IN</a>
+               <a class="username-space" id="name-of-user">SIGNED IN</a>
+               <a href="/logout" class="log-out">LOG OUT</a> 
           </div>
      </header>
-     <div class="task-creation-container">
-          <button class="create-task">CREATE TASK</button>
-     </div>
-     <section class="section">
-          <div class="task-area">
 
+     <div class="task-creation-container">
+          <form id="task-form">
+          <input class="new-task" type="text" placeholder="What do you want to do">
+          <input class="new-date" type="date">
+          <input class="new-stime" type="text" placeholder="Start time">
+          <input class="new-etime" type="text" placeholder="End time">
+          <button type="submit" class="create-task" id="create-task-btn">ADD TASK</button>
+          </form>
+     </div>
+
+     <section class="section">
+          <div class="task-container">
+               <div class="task">
+                    <table>
+                         <thead>
+                              <tr>
+                                   <th>task</th>
+                                   <th>date</th>
+                                   <th>start time</th>
+                                   <th>end time</th>
+                                   <th>Editors</th>
+                              </tr>
+                         </thead>
+                         <tbody class="task-area">
+                              
+                         </tbody>
+                    </table>
+               </div>
           </div>     
      </section>
 </body>

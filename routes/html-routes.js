@@ -16,8 +16,9 @@ module.exports = function(app) {
      app.get("/", function(req, res) {
           if (userInside) {
                res.redirect('/task');
-          };
+          } else{
           res.sendFile(path.join(__dirname, "../public/html/login.html"));
+          }
      });
      app.get("/task", ensuredLoggedIn('/'), function(req, res) {
           res.sendFile(path.join(__dirname, "../public/html/task.html"));

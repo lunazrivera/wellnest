@@ -6,6 +6,11 @@ var passport = require('passport');
 
 module.exports = function(app) {
 
+     app.get("/api/user-logged", function(req, res) {
+          // console.log(req.user.dataValues);
+          res.json(req.user)
+     })
+
      app.post("/api/users", function(req, res) {
           db.user.findOne({where: {username: req.body.username}}).then(function(data) {
                if (data) {
@@ -37,7 +42,6 @@ module.exports = function(app) {
      app.post('/api/login', passport.authenticate('local', { failureRedirect: '/' }), (req, res, next) => {
           req.session.save((err) => {
                if (err) {
-                    console.log('hey');
                     return next(err);
                }
                res.redirect('/task');
@@ -45,8 +49,6 @@ module.exports = function(app) {
      });
 
      app.get('/logout', (req, res, next) => {
-          console.log("login out!")
-          console.log(req);
           req.logout();
           req.session.save((err) => {
                if (err) {
