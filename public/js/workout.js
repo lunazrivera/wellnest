@@ -147,8 +147,8 @@ $("#theLegs").on("click", function(){
             // we save it into a variable so that we dont repeat ourself again
             // we pluck plan specifically from our workout
             $("#legs-appear-here").append(
-                "<h5 class='card-title'>" + workouts[i].name + "</h5>" + 
-                     "<p class='card-text'> Type: "+ workouts[i].type + "<br> Summary: " +
+                "<div class='card-header'>" + workouts[i].name + "</div>" + 
+                     "<div class='card-text'> Type: "+ workouts[i].type + "<br> Summary: " +
                     workouts[i].summary + "<br>" + "Workout Plan: " + "<br>"
             )
             let plan = workouts[i].plan;
@@ -169,9 +169,10 @@ $("#theLegs").on("click", function(){
                     console.log(exer[i].example)
 
                     $("#legs-appear-here").append(
-                    "Exercise: " + exer[i].exercisename + " " + " Sets: " + exer[i].sets + " Reps: " + 
-                    + " " + exer[i].reps + " Example video: " + exer[i].example + "<br>" 
-                )}
+                        "<br>" + "Exercise: " + exer[i].exercisename + " " + " Sets: " + exer[i].sets + " Reps: " + 
+                        + " " + exer[i].reps + " Example video: <a href='" + exer[i].example + "'>" + exer[i].example + "</a><br>" 
+                    );
+                }
             }
         }
     }) 
@@ -198,8 +199,8 @@ $("#cardioHitt").on("click", function(){
             // we save it into a variable so that we dont repeat ourself again
             // we pluck plan specifically from our workout
             $("#cardio-appears-here").append(
-                "<h5 class='card-title'>" + workouts2[j].name + "</h5>" + 
-                     "<p class='card-text'> Type: "+ workouts2[j].type + "<br> Summary: " +
+                "<div class='card-header'>" + workouts2[j].name + "</div>" + 
+                     "<div class='card-text'> Type: "+ workouts2[j].type + "<br> Summary: " +
                     workouts2[j].summary + "<br>" + "Workout Plan: " + "<br>"
             )
             let warm = workouts2[j].plan;
@@ -220,8 +221,8 @@ $("#cardioHitt").on("click", function(){
                     console.log(exer2[j].example)
 
                     $("#cardio-appears-here").append(
-                    "Exercise: " + exer2[j].exercisename + " " + " Sets: " + exer2[j].sets + " Reps: " + 
-                    + " " + exer2[j].reps + " Example video: " + exer2[j].example + "<br>" 
+                    "<br>" + "Exercise: " + exer2[j].exercisename + " " + " Sets: " + exer2[j].sets + " Reps: " + 
+                    + " " + exer2[j].reps + " Example video: <a href='" + exer2[j].example + "'>" + exer2[j].example + "</a><br>" 
                 )}
             }
         }
@@ -249,8 +250,8 @@ $("#pLift").on("click", function(){
             // we save it into a variable so that we dont repeat ourself again
             // we pluck plan specifically from our workout
             $("#powerlifting-appears-here").append(
-                "<h5 class='card-title'>" + workouts3[w].name + "</h5>" + 
-                     "<p class='card-text'> Type: "+ workouts3[w].type + "<br> Summary: " +
+                "<div class='card-header'>" + workouts3[w].name + "</div>" + 
+                     "<div class='card-text'> Type: "+ workouts3[w].type + "<br> Summary: " +
                     workouts3[w].summary + "<br>" + "Workout Plan: " + "<br>"
             )
             let liftEm = workouts3[w].plan;
@@ -271,8 +272,8 @@ $("#pLift").on("click", function(){
                     console.log(exer3[w].example)
 
                     $("#powerlifting-appears-here").append(
-                    "Exercise: " + exer3[w].exercisename + " " + " Sets: " + exer3[w].sets + " Reps: " + 
-                    + " " + exer3[w].reps + " Example video: " + exer3[w].example + "<br>" 
+                    "<br>" + "Exercise: " + exer3[w].exercisename + " " + " Sets: " + exer3[w].sets + " Reps: " + 
+                    + " " + exer3[w].reps + " Example video: <a href='" + exer3[w].example + "'>" + exer3[w].example +"</a><br>" 
                 )}
             }
         }

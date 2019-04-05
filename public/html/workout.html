@@ -22,31 +22,44 @@
           fatsecret.setContainer("my_container");
           fatsecret.setCanvas("home");
      </script> -->
-
-     <button data-workout-legs="legs" id="theLegs">Legs</button>
-     <button data-workout-cardio="hiitcardio" id="cardioHitt">Cardio</button>
-     <button data-workout-lift="powerlifting" id="pLift">Power Lifting</button>
+     <div class="container d-flex justify-content-center">
+          <div class="mx-auto" style="display: inline;">  
+               <button data-workout-legs="legs" id="theLegs">Legs</button>
+               <button data-workout-cardio="hiitcardio" id="cardioHitt">Cardio</button>
+               <button data-workout-lift="powerlifting" id="pLift">Power Lifting</button>
+          </div>
+     </div>
+     <br>
 
      <div class="container">
-          <div class="row">
-               <div class="cards"> 
-                    <div class= "card-body" id="legs-appear-here"></div>
+          <div class="row d-flex justify-content-center">
+               <div class="col">
+                    <div class="cards bg-light mb-3" style="max-width:20rem" > 
+                         <div class="card-body">
+                              <div id="legs-appear-here"></div>
+                         </div>     
+                    </div>
                </div>
-          </div>
-          <div class="row">
-               <div class="cards"> 
-                    <div class= "card-body" id="cardio-appears-here"></div>
+               <div class="col">
+                    <div class="cards bg-light mb-3" style="max-width: 20rem"> 
+                         <div class= "card-body">
+                              <div id="cardio-appears-here"></div>
+                         </div> 
+                    </div>
+               </div>
+               <div class="col">
+                    <div class="cards bg-light mb-3" style="max-width: 20rem"> 
+                         <div class= "card-body"> 
+                              <div id="powerlifting-appears-here"></div>
+                         </div>
+                    </div>
                </div>
           </div>
      </div>
      
-     <div class="container">
-          <div class="row">
-               <div class="cards"> 
-                    <div class= "card-body" id="powerlifting-appears-here"></div>
-               </div>
-          </div>
-     </div>
+    
+         
+    
     
 
     
