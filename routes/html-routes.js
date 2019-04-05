@@ -5,7 +5,7 @@
 var path = require("path");
 var passport = require("passport");
 var ensuredLoggedIn = require("connect-ensure-login").ensureLoggedIn;
-var userInside = false
+
 
 //Routes
 module.exports = function(app) {
@@ -14,7 +14,7 @@ module.exports = function(app) {
 
      //Root route loads login.html
      app.get("/", function(req, res) {
-          if (userInside) {
+          if (req.user) {
                res.redirect('/task');
           } else{
           res.sendFile(path.join(__dirname, "../public/html/login.html"));
@@ -26,10 +26,10 @@ module.exports = function(app) {
      app.get("/workout", ensuredLoggedIn('/'), function(req, res) {
           res.sendFile(path.join(__dirname, "../public/html/workout.html"));
      });
-     app.get("/user", ensuredLoggedIn('/'), function(req, res) {
-          userInside = true;
+     app.get("/nutrition", ensuredLoggedIn('/'), function(req, res) {
+          
           console.log("Hello!!!")
           console.log(req.user)
-          res.sendFile(path.join(__dirname, "../public/html/user.html"));
+          res.sendFile(path.join(__dirname, "../public/html/nutrition.html"));
      });
 }

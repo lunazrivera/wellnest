@@ -5,6 +5,7 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <meta http-equiv="X-UA-Compatible" content="ie=edge">
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+     <script src="../js/user.js"></script>
      <script src="../js/task.js"></script>
      <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet"/>
      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -33,35 +34,19 @@
           </div>
      </header>
 
-     <div class="task-creation-container">
-          <form id="task-form">
-          <input class="new-task" type="text" placeholder="What do you want to do">
-          <input class="new-date" type="date">
-          <input class="new-stime" type="text" placeholder="Start time">
-          <input class="new-etime" type="text" placeholder="End time">
-          <button type="submit" class="create-task" id="create-task-btn">ADD TASK</button>
-          </form>
-     </div>
+     <section class="section-nutrition">
+          <div id="my_container" class="fatsecret_container"></div>
 
-     <section class="section">
-          <div class="task-container">
-               <div class="task">
-                    <table>
-                         <thead>
-                              <tr>
-                                   <th>task</th>
-                                   <th>date</th>
-                                   <th>start time</th>
-                                   <th>end time</th>
-                                   <th>Editors</th>
-                              </tr>
-                         </thead>
-                         <tbody class="task-area">
+          <script src="https://platform.fatsecret.com/js?key=c572524486de445292d5da1f1690241c&auto_load=true"></script>
 
-                         </tbody>
-                    </table>
-               </div>
-          </div>     
+          <script src="https://platform.fatsecret.com/js?key=c572524486de445292d5da1f1690241c"></script> -->
+
+          <script src="https://platform.fatsecret.com/js?key=c572524486de445292d5da1f1690241c&theme=blank"></script>
+               
+          <script>
+               fatsecret.setContainer("my_container");
+               fatsecret.setCanvas("home");
+          </script>
      </section>
 </body>
 </html>

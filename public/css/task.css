@@ -62,6 +62,13 @@ body {
      .section {
           background-color: black;
      }
+     .section-workout {
+          background-color: black;
+     }
+
+     .section-nutrition {
+          background-color: white;
+     }
 
      .task-container {
           margin: 0 auto;
