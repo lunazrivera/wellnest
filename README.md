@@ -14,9 +14,11 @@ Nest better habits! Centered in the daily doings and habits of humans. **Wellnes
 | Front-end: | Bootstrap, jQuery |
 | Back-end: | Sequelize, Express, Node.js, Passport.js |
 
+### Demo
 
+Our project is deployed using Heroku. Visit it here: [Wellnest](https://dashboard.heroku.com/apps/wellnest-project "Wellnest app")
 
-Dependencies:
+**Dependencies:**
 
 -   Bcrypt - A library to help you hash passwords.
     
@@ -68,6 +70,7 @@ SQL_PWD = 'YOUR-SQL-PASSWORD'
 Third, we are assuming you have the node.js installed. If you don't have it, visit [https://nodejs.org/en/](https://nodejs.org/en/) on how to install it. It's important because you will be able to install the dependencies for npm. Type "npm i" to install all the dependencies.
 
 You should be all set up. Simply type "node server.js" and visit the port indicated in the terminal.	
+
 
 ### Screenshots
 
@@ -162,11 +165,10 @@ You should be all set up. Simply type "node server.js" and visit the port indica
 
 **Front-end:**
 
- - [Arin]([https://github.com/arinmsn](https://github.com/arinmsn) "Arin Minasian's Github Profile")
+ - [Arin](https://github.com/arinmsn "Arin Minasian's Github Profile")
  - [Jin Young]("Jin Young Kim's Github Profile")
 
-
 **Back-end:**
- - [Luna]([https://github.com/lunazrivera](https://github.com/lunazrivera) "Luna Rivera's Github Profile")
- - [Joshua]([https://github.com/jflopezr11](https://github.com/jflopezr11) "Joshua Lopez's Github Profile")
+ - [Luna](https://github.com/lunazrivera "Luna Rivera's Github Profile")
+ - [Joshua](https://github.com/jflopezr11 "Joshua Lopez's Github Profile")
 
