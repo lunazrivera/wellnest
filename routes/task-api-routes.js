@@ -22,9 +22,10 @@ module.exports = function(app) {
 
      //Reading task from the database
      app.get("/api/task", function(req, res) {
-
+          // console.log("Getting Task")
+          // console.log(req.user);
           // Returning all tasks entries
-          db.task.findAll({}).then(function(dbTask) {
+          db.task.findAll({where:{userId: req.user.dataValues.id}}).then(function(dbTask) {
                // console.log(dbTask);
                //Sending the task back as an argument inside a callback function
                res.json(dbTask)
@@ -41,7 +42,11 @@ module.exports = function(app) {
           });
      });
 
+     // app.put("/api/task/complete/:id", function(req, res) {
+     //      db.task.update({complete})
+     // })
      app.put("/api/task/:id", function(req, res) {
+          console.log(req.body.complete);
           db.task.update({
                taskname: req.body.taskname,
                date: req.body.date,

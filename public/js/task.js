@@ -93,9 +93,9 @@ $(document).ready(function() {
                     "</span>",
                     "<input type='text' class='edit' name='endtime' style='display: none;'>",
                     "</td>",
-                    "<td class='task-item' >",
+                    "<td class='task-item editors' >",
                     "<button class='delete btn btn-danger'>x</button>",
-                    "<button class='complete btn btn-primary'>✓</button>",
+                    "<button class='complete btn btn-primary' name='complete'>✓</button>",
                     "</td>",
                     "</tr>"
                ].join("")
@@ -141,32 +141,36 @@ $(document).ready(function() {
      }
 
      function toggleComplete(event) {
+          debugger;
           event.stopPropagation();
-          var task =$(this).parent().children("span");
+          var taskId = $(this).closest("[data-id]").attr('data-id');
+          var task = $(this).parent().children("span");
+          console.log("You are in toggle complete")
+          console.log(task.complete)
+          var field = $(this).attr("name");
+          var payload = {};
           task.complete = !task.complete;
-          update(task)
+          task = task.complete
+          payload[field] = task;
+          payload.somepropertyname;
+          updateTask(taskId, payload)
      }
 
      function finishEdit(event) {
-          if (event.which !== 13) { return; }
-
-          debugger;
-          
+          if (event.which !== 13) { 
+               return;
+          } else {
           var updatedTask = $(this).children("span");
-          // console.log($(this).text(), "Hello world!");
-          // set text then return it as value to updated
           var value = updatedTask.text($(this).children("input").val().trim()).text(); 
-          console.log(value);
           $(this).blur();
           var taskId = $(this).closest("[data-id]").attr('data-id');
-          console.log(taskId);
           var field = $(this).children("input").attr("name");
           var payload = {};
           payload[field] = value;
-
           payload.somepropertyname;
-          payload['somepropertyname']
+          // payload['somepropertyname']
           updateTask(taskId, payload);
+          }
           
      }
 
@@ -177,6 +181,14 @@ $(document).ready(function() {
                data: task
           }).then(getTask);
      }
+
+     // function updateComplete(taskId, task) {
+     //      $.ajax({
+     //           method: "PUT",
+     //           url: "/api/task/complete" + taskId,
+     //           data: task
+     //      }).then(getTask);
+     // }
 
      function cancelEdit() {
           var currentTask = $(this).data("task");

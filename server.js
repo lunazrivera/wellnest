@@ -7,8 +7,8 @@ require('dotenv').config();
 
 // Below we'll be requiring dependencies for the server.
 var express = require("express");
-var session = require("express-session");
-var passport = require("passport")
+var session = require("express-session");  //expression-session is dealing with the session created by passport
+var passport = require("passport"); //passport is required for dealing with our auth.
 
 // Below we'll be creating an instance of the express application.
 var app = express();

@@ -9,7 +9,9 @@ body {
      
      background-color: black;
 }
-
+     /*************************************************/
+     /* HEADER STYLES BEGIN */
+     /*************************************************/
 .header-container {
      background-color: white;
      display: flex;
@@ -49,9 +51,18 @@ body {
           .log-out {
                align-self: center;
           }
+     /*************************************************/
+     /* HEADER STYLES END */
+     /*************************************************/
 
+
+     /*************************************************/
+     /* TASK PAGE STYLES START*/
+     /*************************************************/
      .task-creation-container {
           /* border: 1px solid white; */
+          display: flex;
+          justify-content: center;
           margin: 0 auto;
           margin-top: 40px;
           max-width: 850px;
@@ -60,6 +71,7 @@ body {
                padding: 3px;
           }
      .section {
+          margin-top: 30px;
           background-color: black;
      }
      .section-workout {
@@ -70,28 +82,51 @@ body {
           background-color: white;
      }
 
-     .task-container {
+     /* .task-container {
           margin: 0 auto;
           margin-top: 10px;
           max-width: 850px;
           border: 1px solid white;
-     }
+     } */
           .task {
                background-color: white;
           }
-               table {
+               /* table {
                     width: 100%;
-                    border: 1px solid black;
-               }
+                     border: 1px solid black; 
+                }
                td, th {
-                    border: 1px solid black;
+                     border: 1px solid black; 
                     text-align: left;
                     padding: 5px;
-               }
-          .editors-container {
+               }*/
+          .editors {
                display: flex;
-               justify-content: flex-end;
+               justify-content: space-around;
           }
           .fas {
                margin-right: 10px;
           }
+     /*************************************************/
+     /* TASK PAGE STYLES END */
+     /*************************************************/
+
+
+     /*************************************************/
+     /*  STYLES BEGIN */
+     /*************************************************/
+     /*************************************************/
+     /*  STYLES END */
+     /*************************************************/
+
+
+
+     /*************************************************/
+     /*  FOOTER STYLES BEGIN */
+     /*************************************************/
+     footer {
+          background-color: white;
+     }
+     /*************************************************/
+     /*  FOOTER STYLES END */
+     /*************************************************/
