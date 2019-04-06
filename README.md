@@ -16,7 +16,7 @@ Nest better habits! Centered in the daily doings and habits of humans. **Wellnes
 
 ### Demo
 
-Our project is deployed using Heroku. Visit it here: [Wellnest](https://dashboard.heroku.com/apps/wellnest-project "Wellnest app")
+Our project is deployed using Heroku. Visit it here: [Wellnest](https://wellnest-project.herokuapp.com/ "Wellnest app")
 
 **Dependencies:**
 
