@@ -80,7 +80,7 @@ You should be all set up. Simply type "node server.js" and visit the port indica
 **Front-end:**
 
  - [Arin](https://github.com/arinmsn "Arin Minasian's Github Profile")
- - Jin Young Kim
+ - [Jin](https://github.com/twitchjinja?tab=repositories "Jin Young Kim's Github Profile")
 
 **Back-end:**
  - [Luna](https://github.com/lunazrivera "Luna Rivera's Github Profile")
