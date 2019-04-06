@@ -71,9 +71,6 @@ You should be all set up. Simply type "node server.js" and visit the port indica
 
 ### Screenshots
 
-![Login page of t](https://ibb.co/Ry46xcB "Login page")
-
-
 
 ###  Team
 
