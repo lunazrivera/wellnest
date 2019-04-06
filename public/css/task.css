@@ -1,0 +1,150 @@
+* {
+     /* border: 1px solid black; */
+     margin: 0;
+     padding: 0;
+     font-family: "Righteous", cursive;
+}
+
+body, html {
+     background-color: black;
+}
+
+
+     /*************************************************/
+     /* HEADER STYLES BEGIN */
+     /*************************************************/
+.header-container {
+     
+     background-color: #ffc107;
+     display: flex;
+     justify-content: space-around;
+}
+
+     .logo-container {
+          display: flex;
+     }
+     .logo-image {
+          align-self: center;
+          width: 70px;
+          height:70px;
+     }
+     .nav {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+     }
+          .nav-list, li {
+               display: inline;
+               list-style-type: none;
+          }
+
+     .user-container {
+          display: flex;
+     }
+          .user-logo {
+               align-self: center;
+               width: 70px;
+               height: 70px;
+          }
+          .username-space {
+               align-self: center;
+               margin-right: 10px; 
+          }
+          .log-out {
+               align-self: center;
+          }
+     /*************************************************/
+     /* HEADER STYLES END */
+     /*************************************************/
+
+
+
+     /*************************************************/
+     /* TASK PAGE STYLES START*/
+     /*************************************************/
+     .task-creation-container {
+          /* border: 1px solid white; */
+          display: flex;
+          justify-content: center;
+          margin: 0 auto;
+          margin-top: 40px;
+          max-width: 850px;
+     }
+          .create-task {
+               padding: 3px;
+          }
+     .section {
+          margin-top: 30px;
+          background-color: black;
+     }
+     .section-workout {
+          background-color: black;
+     }
+
+     .section-nutrition {
+          background-color: white;
+     }
+
+     /* .task-container {
+          margin: 0 auto;
+          margin-top: 10px;
+          max-width: 850px;
+          border: 1px solid white;
+     } */
+          .task {
+               background-color: white;
+          }
+               /* table {
+                    width: 100%;
+                     border: 1px solid black; 
+                }
+               td, th {
+                     border: 1px solid black; 
+                    text-align: left;
+                    padding: 5px;
+               }*/
+          .editors {
+               display: flex;
+               justify-content: space-around;
+          }
+          .fas {
+               margin-right: 10px;
+          }
+     /*************************************************/
+     /* TASK PAGE STYLES END */
+     /*************************************************/
+
+     /*************************************************/
+     /*  WORKOUT STYLES BEGIN */
+     /*************************************************/
+     .workout-container {
+          margin-top: 30px;
+     }
+     /*************************************************/
+     /*  WORKOUT STYLES END */
+     /*************************************************/
+
+
+
+
+     /*************************************************/
+     /*  FOOTER STYLES BEGIN */
+     /*************************************************/
+
+     /*************************************************/
+     /*  FOOTER STYLES END */
+     /*************************************************/
+
+
+
+
+
+
+
+
+     /*************************************************/
+     /*  STYLES BEGIN */
+     /*************************************************/
+     /*************************************************/
+     /*  STYLES END */
+     /*************************************************/

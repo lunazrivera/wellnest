@@ -1,0 +1,97 @@
+#main {
+     background-color: black;
+     color:white;
+ }
+ .submit {
+ background-color: white;
+ color:black;
+ }
+  #todoHeader {
+     text-align: center;
+ }
+ .header {
+     color:black;
+     padding-top: 10px;
+     background-color: #ffc107;
+     text-align:center;
+ }
+ .loginform {
+     padding-right:30px;
+ }
+ #todolinks {
+     color: black;
+ }
+ .login {
+     padding-top:15px;
+ }
+ /* Google Fonts 
+     for logoName
+     font-family: 'Righteous', cursive;
+ */
+ .logoName {
+     font-family: 'Righteous', cursive; 
+     font-size: 40px;
+ }
+ body {
+     background-color: black;
+ }
+ hr {
+         border: 0;
+         clear:both;
+         display:block;
+         width: 96%;               
+         background-color:white;
+         height: 1px;
+       }
+   #taskbutton {
+       padding-left: 150px;
+       font-size: 25px;
+   }
+   #taskdiv {
+       display: flex;
+       flex-direction: row;
+   }
+   input:invalid {
+     box-shadow: 0 0 5px 1px red;
+   }
+   .material-icons.md-18 {
+     font-size: 18px;
+   }
+   .material-icons.md-24 {
+     font-size: 24px;
+   }
+   .material-icons.md-30 {
+     font-size: 30px;
+   }
+   .material-icons.md-36 {
+     font-size: 36px;
+   }
+   .material-icons.md-48 {
+     font-size: 48px;
+   }
+   table,
+   th {
+     padding: 5px;
+   }
+   .bd-placeholder-img {
+     font-size: 1.125rem;
+     text-anchor: middle;
+     -webkit-user-select: none;
+     -moz-user-select: none;
+     -ms-user-select: none;
+     user-select: none;
+   }
+   @media (min-width: 768px) {
+     .bd-placeholder-img-lg {
+       font-size: 3.5rem;
+     }
+   }
+   /* Strike through when checkbox is clicked */
+   input[type=checkbox]:checked+.strikethrough {
+     text-decoration: line-through;
+   }
+
+  .register-section {
+    margin-top: 110px;
+
+  }

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+     <script src="../js/user.js"></script>
+     <script src="../js/task.js"></script>
+     <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet"/>
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+     <link rel="icon" type="image/png" href="../assets/logo.png">
+     <link rel="stylesheet" type="text/css" media="screen" href="../css/task.css"/>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     <title>Wellnest || Nutrition </title>
+</head>
+<body>
+     <header class="header-container">
+          <div class="logo-container">
+               <img src="../assets/logo.png" class="logo-image" alt="bird-logo">
+               <nav class="nav">
+                    <ul class="nav-list">
+                         <li> <a href="/workout" id="workout-page"> WORKOUT </a> | </li>
+                         <li> <a href="/task" id="task-page"> TASK </a> | </li>
+                         <li> <a href="/nutrition" id="nutrition-page"> NUTRITION </a></li>
+                    </ul>
+               </nav>
+          </div>
+
+          <div class="user-container">
+               <img src="../assets/user-logo.png" class="user-logo" alt="bird-png">
+               <a class="username-space" id="name-of-user"></a>
+               <a href="/logout" class="log-out">LOG OUT</a> 
+          </div>
+     </header>
+
+     <section class="section-nutrition">
+          <div id="my_container" class="fatsecret_container"></div>
+
+          <script src="https://platform.fatsecret.com/js?key=c572524486de445292d5da1f1690241c&auto_load=true"></script>
+
+          <script src="https://platform.fatsecret.com/js?key=c572524486de445292d5da1f1690241c"></script> -->
+
+          <script src="https://platform.fatsecret.com/js?key=c572524486de445292d5da1f1690241c&theme=blank"></script>
+               
+          <script>
+               fatsecret.setContainer("my_container");
+               fatsecret.setCanvas("home");
+          </script>
+     </section>
+</body>
+</html>

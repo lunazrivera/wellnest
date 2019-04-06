@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+     <script src="../js/user.js"></script>
+     <script src="../js/task.js"></script>
+     <script src="../js/workout.js"></script>
+     <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet"/>
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     <link rel="icon" type="image/png" href="../assets/logo.png">
+
+     <link rel="stylesheet" type="text/css" media="screen" href="../css/task.css"/>
+
+     <title>Wellnest || Workout</title>
+</head>
+<body>
+     <header class="header-container">
+          <div class="logo-container">
+               <img src="../assets/logo.png" class="logo-image" alt="bird-logo">
+               <nav class="nav">
+                    <ul class="nav-list">
+                         <li> <a href="/workout"   id="workout-page"> WORKOUT </a> | </li>
+                         <li> <a href="/task"  id="task-page"> TASK </a> | </li>
+                         <li> <a href="/nutrition"  id="nutrition-page"> NUTRITION </a></li>
+                    </ul>
+               </nav>
+          </div>
+
+          <div class="user-container">
+               <img src="../assets/user-logo.png" class="user-logo" alt="bird-png">
+               <a class="username-space" id="name-of-user"></a>
+               <a href="/logout" class="log-out">LOG OUT</a> 
+          </div>
+     </header>
+
+     <div class="container workout-container d-flex justify-content-center">
+               <div class="mx-auto" style="display: inline;">  
+                    <button class="btn btn-warning" placeholder="Legs" data-workout-legs="legs" id="theLegs">legs</button>
+                    <button class="btn btn-warning" placeholder="Cardio" data-workout-cardio="hiitcardio" id="cardioHitt">cardio</button>
+                    <button class="btn btn-warning" placeholder="Power Lift" data-workout-lift="powerlifting" id="pLift">lift</button>
+               </div>
+     </div>
+          <br>
+     <section class="section-workout">
+          
+     <div class="container">
+               <div class="row d-flex justify-content-center">
+                    <div class="col">
+                         <div class="cards bg-light mb-3" style="max-width:20rem" > 
+                              <div class="card-body">
+                                   <div id="legs-appear-here"></div>
+                              </div>     
+                         </div>
+                    </div>
+                    <div class="col">
+                         <div class="cards bg-light mb-3" style="max-width: 20rem"> 
+                              <div class= "card-body">
+                                   <div id="cardio-appears-here"></div>
+                              </div> 
+                         </div>
+                    </div>
+                    <div class="col">
+                         <div class="cards bg-light mb-3" style="max-width: 20rem"> 
+                              <div class= "card-body"> 
+                                   <div id="powerlifting-appears-here"></div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </section>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
