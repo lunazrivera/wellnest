@@ -12,7 +12,7 @@
  .header {
      color:black;
      padding-top: 10px;
-     background-color: white;
+     background-color: #ffc107;
      text-align:center;
  }
  .loginform {
@@ -90,3 +90,8 @@
    input[type=checkbox]:checked+.strikethrough {
      text-decoration: line-through;
    }
+
+  .register-section {
+    margin-top: 110px;
+
+  }
